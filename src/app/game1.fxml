@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1080.0" maxWidth="1920.0" minHeight="1080.0" minWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.GameController1">
+   <children>
+      <AnchorPane fx:id="lawn" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/lawnNew.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="LMs" layoutX="319.0" layoutY="181.0" prefHeight="823.0" prefWidth="114.0">
+                     <children>
+                        <ImageView fitHeight="104.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/Lawnmower_Idle.gif" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="60.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="104.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/Lawnmower_Idle.gif" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="75.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="104.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/Lawnmower_Idle.gif" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="75.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="104.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/Lawnmower_Idle.gif" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="75.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="104.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/Lawnmower_Idle.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="126.0" fitWidth="150.0" layoutX="1793.0" layoutY="1.0" onMouseClicked="#pause" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/pause.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="time" layoutX="1278.0" layoutY="15.0" prefHeight="50.0" prefWidth="229.0" text="Time:">
+                     <font>
+                        <Font name="Arial Black" size="33.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ProgressBar" fitHeight="39.0" fitWidth="477.0" layoutX="128.0" layoutY="25.0" pickOnBounds="true" scaleX="0.01">
+                     <image>
+                        <Image url="@../imgs/loading_move.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView blendMode="DARKEN" fitHeight="87.0" fitWidth="490.0" layoutX="363.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/loading_bg.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="plantIcons" layoutX="33.0" layoutY="335.0" prefHeight="562.0" prefWidth="154.0">
+                     <children>
+                        <ImageView fitHeight="112.0" fitWidth="150.0" onMouseClicked="#selectSunF" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../imgs/icons/sunflowericon.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="112.0" fitWidth="150.0" onMouseClicked="#selectPeaS" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/icons/peashootericon.PNG" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="112.0" fitWidth="150.0" onMouseClicked="#selectMine" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../imgs/icons/potatomineicon.PNG" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="112.0" fitWidth="150.0" onMouseClicked="#selectWalnut" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../imgs/icons/wallnuticon.PNG" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Button layoutX="1814.0" layoutY="996.0" mnemonicParsing="false" onMouseClicked="#printImgViews" prefHeight="63.0" prefWidth="87.0" text="Button" visible="false" />
+               </children>
+            </AnchorPane>
+            <StackPane layoutX="22.0" layoutY="-7.0" prefHeight="84.0" prefWidth="132.0">
+               <children>
+                  <ImageView fitHeight="278.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/sun.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="suns" alignment="CENTER" prefHeight="101.0" prefWidth="140.0" text="0">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="pea1" fitHeight="50.0" fitWidth="50.0" layoutX="-222.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea2" fitHeight="50.0" fitWidth="50.0" layoutX="-220.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea3" fitHeight="50.0" fitWidth="50.0" layoutX="-227.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea4" fitHeight="50.0" fitWidth="50.0" layoutX="-231.0" layoutY="693.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea5" fitHeight="50.0" fitWidth="50.0" layoutX="-232.0" layoutY="869.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea11" fitHeight="50.0" fitWidth="50.0" layoutX="-212.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea21" fitHeight="50.0" fitWidth="50.0" layoutX="-210.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea31" fitHeight="50.0" fitWidth="50.0" layoutX="-217.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea41" fitHeight="50.0" fitWidth="50.0" layoutX="-221.0" layoutY="703.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pea51" fitHeight="50.0" fitWidth="50.0" layoutX="-222.0" layoutY="879.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/peashooterprojectile.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="lawnGrid" layoutX="444.0" layoutY="136.0" prefHeight="898.0" prefWidth="1320.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="166.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="10.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="157.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="304.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="451.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="598.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="745.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="892.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1039.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="10.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="10.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="157.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="304.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="451.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="598.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="745.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="892.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1039.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1186.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="10.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="157.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="304.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="451.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="598.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="745.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="892.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1039.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1186.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="10.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="157.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="304.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="451.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="598.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="745.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="892.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1039.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1186.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="10.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="157.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="304.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="451.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="598.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="745.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="892.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <ImageView fitHeight="166.0" fitWidth="146.0" layoutX="1039.0" layoutY="728.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <ImageView fx:id="sun1" fitHeight="112.0" fitWidth="150.0" layoutX="244.0" layoutY="-139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Sun.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sun2" fitHeight="112.0" fitWidth="150.0" layoutX="954.0" layoutY="-148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Sun.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sun3" fitHeight="112.0" fitWidth="150.0" layoutX="1590.0" layoutY="-165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Sun.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom11" fitHeight="194.0" fitWidth="178.0" layoutX="2362.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Reg_Zombie.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom12" fitHeight="205.0" fitWidth="173.0" layoutX="3598.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Zombie_Walk.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom22" fitHeight="172.0" fitWidth="186.0" layoutX="2805.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Zombie_Walk.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom21" fitHeight="180.0" fitWidth="168.0" layoutX="1942.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Reg_Zombie.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom31" fitHeight="164.0" fitWidth="180.0" layoutX="2392.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Reg_Zombie.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom32" fitHeight="166.0" fitWidth="156.0" layoutX="3415.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Zombie_Walk.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom41" fitHeight="158.0" fitWidth="162.0" layoutX="1956.0" layoutY="674.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Reg_Zombie.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom42" fitHeight="160.0" fitWidth="160.0" layoutX="2882.0" layoutY="715.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Zombie_Walk.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom51" fitHeight="166.0" fitWidth="162.0" layoutX="2381.0" layoutY="868.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Reg_Zombie.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zom52" fitHeight="168.0" fitWidth="170.0" layoutX="3711.0" layoutY="939.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Zombie_Walk.gif" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="win" visible="false">
+         <children>
+            <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/win.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="674.0" layoutY="981.0" mnemonicParsing="false" onMouseClicked="#restart" prefHeight="71.0" prefWidth="193.0" text="RETRY">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+            <Button layoutX="169.0" layoutY="983.0" mnemonicParsing="false" onMouseClicked="#backToMenu" prefHeight="71.0" prefWidth="275.0" text="BACK TO MENU">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+            <Button layoutX="1573.0" layoutY="974.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="71.0" prefWidth="193.0" text="EXIT">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+            <Button layoutX="1090.0" layoutY="978.0" mnemonicParsing="false" onMouseClicked="#conti" prefHeight="71.0" prefWidth="219.0" text="CONTINUE">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="lose" prefHeight="1080.0" prefWidth="1920.0" visible="false">
+         <children>
+            <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/lostGame.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="860.0" layoutY="910.0" mnemonicParsing="false" onMouseClicked="#restart" prefHeight="71.0" prefWidth="193.0" text="RETRY">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+            <Button layoutX="165.0" layoutY="910.0" mnemonicParsing="false" onMouseClicked="#backToMenu" prefHeight="71.0" prefWidth="275.0" text="BACK TO MENU">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+            <Button layoutX="1564.0" layoutY="910.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="71.0" prefWidth="193.0" text="EXIT">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="inGameMenu" layoutX="748.0" layoutY="310.0" prefHeight="462.0" prefWidth="422.0" visible="false">
+         <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#unPause" prefHeight="78.0" prefWidth="478.0" text="BACK">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#restart" prefHeight="78.0" prefWidth="440.0" text="RESTART LEVEL">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#backToMenu" prefHeight="78.0" prefWidth="430.0" text="BACK TO MENU">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#exit" prefHeight="78.0" prefWidth="464.0" text="EXIT">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+
+</AnchorPane>
